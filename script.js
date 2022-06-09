@@ -22,10 +22,8 @@ cross.addEventListener("click", () => {
 document.querySelectorAll(".projectContent").forEach((element) => {
   element.addEventListener("mouseenter", () => {
     element.classList.toggle("projectContent-active");
-    console.log("mouseover");
   });
   element.addEventListener("mouseleave", () => {
     element.classList.toggle("projectContent-active");
-    console.log("mouseover");
   });
 });
