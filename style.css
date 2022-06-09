@@ -1,10 +1,10 @@
 @font-face {
   font-family: Bolde;
-  src: url(/content/BOLDE.ttf);
+  src: url("./content/BOLDE.ttf");
 }
 @font-face {
   font-family: Destro;
-  src: url(/content/DESTRO.ttf);
+  src: url("./content/DESTRO.ttf");
 }
 
 body {
@@ -44,7 +44,7 @@ h1 {
   bottom: 0;
   z-index: 0;
   display: block;
-  background-image: url(/content/grain.gif);
+  background-image: url("./content/grain.gif");
   background-position: 0 0;
   background-size: auto;
   opacity: 0.05;
@@ -275,7 +275,7 @@ h1 {
   bottom: -80%;
   z-index: 0;
   display: block;
-  background-image: url(/content/grain.gif);
+  background-image: url("./content/grain.gif");
   background-position: 0 0;
   background-size: auto;
   opacity: 0.05;
@@ -520,22 +520,23 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 30px 50px;
+  padding: 2em 3.3em;
   overflow: hidden;
 }
 .card-achivement::before {
   content: "";
-  height: 400px;
-  width: 400px;
+  height: 23em;
+  width: 23em;
   border-radius: 50%;
   background-color: #f94343;
   position: absolute;
-  top: -130px;
-  left: -130px;
+  top: -6em;
+  left: -6em;
   z-index: -1;
   filter: blur(3px);
   transition: 0.3s ease-in;
 }
+
 .card-achivement:hover::before {
   height: 100%;
   width: 100%;
@@ -546,20 +547,6 @@ h1 {
   z-index: -1;
   filter: blur(3px);
 }
-/* .card-achivement::after {
-  content: "";
-  height: 200px;
-  width: 200px;
-  transform: rotateX(45deg);
-  background-color: #f94343;
-  position: absolute;
-  bottom: 0;
-  right: 0px;
-  z-index: -1;
-  filter: blur(8px);
-  opacity: 0.6;
-} */
-
 .card-achivement img {
   height: 14em;
   border-radius: 50%;
@@ -711,7 +698,7 @@ h1 {
   align-items: center;
   justify-content: space-between;
   color: #f94343;
-  padding: 40px 130px;
+  padding: 1em 3em;
   flex-wrap: wrap;
 }
 
@@ -726,7 +713,7 @@ h1 {
 
 .bottom-footer p {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 400;
   text-transform: uppercase;
   flex-wrap: wrap;
@@ -749,7 +736,7 @@ h1 {
   line-height: 0.85;
   text-align: center;
   font-weight: 700;
-  padding: 0px 0px 8px 200px;
+  padding: 0px 0px 0.1em 1.5em;
   transition: 0.4s ease-in-out;
   cursor: pointer;
 }
@@ -773,17 +760,17 @@ hr {
 }
 
 .sup-project {
-  font-size: 25px;
+  font-size: 0.2em;
   font-family: Arial, Helvetica, sans-serif;
   color: #f94343;
-  letter-spacing: 6px;
-  margin-left: 11px;
-  margin-bottom: 48px;
-  font-weight: 300;
+  letter-spacing: 0.3rem;
+  /* margin-left: 1rem; */
+  margin-bottom: 2.7rem;
+  font-weight: 400;
 }
 
 .smalltext {
-  font-size: 35px;
+  font-size: 0.3em;
   font-weight: 700;
   font-family: Destro;
   letter-spacing: 4px;
