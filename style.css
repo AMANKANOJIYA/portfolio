@@ -73,7 +73,6 @@ h1 {
   background-color: #342e2e;
   transition: 1s ease-in-out;
   width: 0%;
-  flex-direction: column;
 }
 .l {
   transform: translate3d(4em, 0em, 0em);
@@ -640,19 +639,19 @@ h1 {
 }
 
 .contact h1 {
-  font-size: 90px;
+  font-size: 5rem;
   font-family: Bolde, sans-serif;
   font-weight: 500;
   /* letter-spacing: 1px; */
-  margin-bottom: 60px;
+  margin-bottom: 0.8em;
 }
 
 .small-contact {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  height: 100px;
-  margin: 40px auto;
+  /* height: 100px; */
+  margin: 2rem auto;
 }
 
 .small-contact span {
@@ -804,7 +803,6 @@ hr {
     display: none;
   }
   .hero_section {
-    padding-top: 45em;
     padding-bottom: 20em;
   }
   .hero_image {
@@ -854,6 +852,7 @@ hr {
     justify-content: cenetr;
     flex-wrap: wrap;
     padding: 0;
+    flex-direction: column;
   }
   .swiper {
     width: 100%;
@@ -868,13 +867,14 @@ hr {
 
   .swiper-slide {
     height: 300px !important;
+    width: 90% !important;
   }
   .card-achivement p {
-    font-size: 2em;
+    font-size: 3em;
   }
 
   .card-achivement h2 {
-    font-size: 4em;
+    font-size: 6em;
   }
   .top-footer {
     padding: 0;
@@ -884,7 +884,19 @@ hr {
   }
   .swiper {
     height: auto;
-    padding-bottom: 20px;
+  }
+  .home_h1_span_right {
+    margin: 2.5em 0em 0em 0.5em;
+  }
+  .home_h1_span_left {
+    margin: 1em 0em 0em 0em;
+  }
+  iframe {
+    width: 100%;
+  }
+  .card-achivement img {
+    height: 50em;
+    border-radius: 50%;
   }
 }
 
