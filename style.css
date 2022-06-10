@@ -60,7 +60,7 @@ h1 {
   z-index: 30;
   display: flex;
   overflow: auto;
-  height: 100vh;
+  height: 100%;
   padding-top: 8em;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -73,6 +73,7 @@ h1 {
   background-color: #342e2e;
   transition: 1s ease-in-out;
   width: 0%;
+  flex-direction: column;
 }
 .l {
   transform: translate3d(4em, 0em, 0em);
@@ -107,7 +108,6 @@ h1 {
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
-  min-width: 500px;
 }
 
 .fsm_line {
@@ -136,7 +136,6 @@ h1 {
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
-  min-width: 500px;
 }
 
 .fsm_link {
@@ -270,9 +269,9 @@ h1 {
 .grain_overlay {
   position: fixed;
   left: 0;
-  top: -80%;
+  top: 0;
   right: 0;
-  bottom: -80%;
+  bottom: 0;
   z-index: 0;
   display: block;
   background-image: url("./content/grain.gif");
@@ -567,7 +566,7 @@ h1 {
 }
 
 .achivement {
-  margin-top: 200px;
+  margin-top: 15em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -615,7 +614,7 @@ h1 {
   background-size: cover;
   width: 300px;
   height: 300px;
-  width: 30% !important;
+  width: 400px !important;
   height: 80% !important;
 }
 
@@ -630,7 +629,7 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 100px 50px 30px 150px;
+  padding: 6em 2.5em 1em 9em;
 }
 
 .contact {
@@ -724,7 +723,7 @@ h1 {
   height: auto;
   width: 100%;
   color: #f94343;
-  margin: 200px 0px 400px 0px;
+  margin: 8em 0em 9em 0px;
 }
 
 .projectContent {
@@ -796,7 +795,7 @@ hr {
     width: auto;
   }
   .bottom-footer {
-    padding: 5px 30px;
+    display: none;
   }
   .hamburger {
     font-size: 2.2em;
@@ -854,6 +853,7 @@ hr {
     -ms-flex-pack: center;
     justify-content: cenetr;
     flex-wrap: wrap;
+    padding: 0;
   }
   .swiper {
     width: 100%;
@@ -867,7 +867,7 @@ hr {
   }
 
   .swiper-slide {
-    height: 50% !important;
+    height: 300px !important;
   }
   .card-achivement p {
     font-size: 2em;
@@ -875,6 +875,16 @@ hr {
 
   .card-achivement h2 {
     font-size: 4em;
+  }
+  .top-footer {
+    padding: 0;
+  }
+  .achivement {
+    height: auto;
+  }
+  .swiper {
+    height: auto;
+    padding-bottom: 20px;
   }
 }
 
@@ -887,4 +897,10 @@ hr {
   justify-content: center;
   flex-direction: column;
   font-family: Bolde;
+}
+
+iframe {
+  width: 600px;
+  height: 450px;
+  border: none;
 }
