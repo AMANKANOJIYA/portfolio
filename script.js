@@ -27,3 +27,13 @@ document.querySelectorAll(".projectContent").forEach((element) => {
     element.classList.toggle("projectContent-active");
   });
 });
+
+// document.querySelectorAll(".blog_outer").forEach((element) => {
+//   console.log(document.querySelectorAll(".blog_outer"));
+//   element.addEventListener("mouseenter", () => {
+//     element.classList.toggle("blog-active");
+//   });
+//   element.addEventListener("mouseleave", () => {
+//     element.classList.toggle("blog-active");
+//   });
+// });

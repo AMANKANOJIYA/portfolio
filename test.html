@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #medium-preview {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        font-family: Arial, sans-serif;
+      }
+
+      #medium-preview h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      #medium-preview p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      #medium-preview a {
+        color: #0066cc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="medium-preview"></div>
+  </body>
+  <script>
+    const mediumUrl = "https://medium.com/feed/@a.kanojiya2003"; // Replace {your-medium-username} with your actual Medium username
+
+    fetch(
+      `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(
+        mediumUrl
+      )}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        const post = data.items[0]; // Get the latest post from the feed
+
+        const title = post.title;
+        const link = post.link;
+        const description = post.description;
+
+        const mediumPreview = document.getElementById("medium-preview");
+
+        mediumPreview.innerHTML = `
+      <h2>${title}</h2>
+      <p>${description}</p>
+      <a href="${link}" target="_blank">Read more</a>
+    `;
+      });
+  </script>
+</html>

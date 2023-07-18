@@ -55,7 +55,7 @@
       <div id="menu_trigger" class="menu_trigger"></div>
       <div class="fsm_left_links">
         <a href="#" class="fsm_link l">Home</a
-        ><a href="./content/resume.pdf" class="fsm_link l">Resume</a
+        ><a href="./content/AmanKanojiya.pdf" class="fsm_link l">Resume</a
         ><a href="#containorHorizontal" class="fsm_link l">Project</a
         ><a href="#footer" class="fsm_link l">Contact</a>
       </div>
@@ -72,10 +72,10 @@
           class="fsm_link r"
           >twitter</a
         ><a
-          href="https://www.facebook.com/aman.kanojiya.792303/"
+          href="https://medium.com/@a.kanojiya2003"
           target="_blank"
           class="fsm_link r"
-          >facebook</a
+          >medium</a
         ><a
           href="https://www.instagram.com/aman_thecodeaddict/"
           target="_blank"
@@ -336,12 +336,32 @@
             </div>
             <div class="card-achivement swiper-slide">
               <h2>
+                1<sup style="font-family: sans-serif; font-size: 0.5em">st</sup>
+                Runner-up
+              </h2>
+              <p>
+                Hackfest-23 Hackathon organized by 
+                <b>IIT Dhanbad</b>
+              </p>
+            </div>
+            <div class="card-achivement swiper-slide">
+              <h2>
                 2<sup style="font-family: sans-serif; font-size: 0.5em">nd</sup>
                 Runner-up
               </h2>
               <p>
                 Digital Alpha's SEC Filing Analyzer for SaaS Companies
-                <b>InterIIT Tech Meet</b>
+                <b>InterIIT Tech Meet 9.0</b>
+              </p>
+            </div>
+            <div class="card-achivement swiper-slide">
+              <h2>
+                2<sup style="font-family: sans-serif; font-size: 0.5em">nd</sup>
+                Runner-up
+              </h2>
+              <p>
+                Consensys Metamask Snaps for wallet
+                <b>InterIIT Tech Meet 10.0</b>
               </p>
             </div>
             <div class="card-achivement swiper-slide">
@@ -351,6 +371,14 @@
                 srcset=""
               />
               <h2>GoogleCloud Ready Facilitator program</h2>
+            </div>
+            <div class="card-achivement swiper-slide">
+              <img
+                src="./content/grid.webp"
+                alt="flipkart grid 4.0"
+                srcset=""
+              />
+              <h2>Finalist Infosec trac</h2>
             </div>
             <div class="card-achivement swiper-slide">
               <h2>
@@ -382,6 +410,25 @@
           </div>
         </div>
       </div>
+      <section id="blog_section" class="awards_section">
+        <h2 class="awards_heading">Blogs</h2>
+        <div class="Blog_grid" id="blogs">
+          <!-- <a href="google.com" class="blog_link"> -->
+            <div class="blog_outer">
+              <img src="./content/amanport.webp" alt="" class="blog_img" />
+              <div class="blog_content">
+                <div class="blog_title">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </div>
+                <div class="subtitle">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cumque, saepe?
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
       <section id="awards_section" class="awards_section">
         <h2 class="awards_heading">Lang, Frameworks &amp; Techstack</h2>
         <div class="awards_grid">
@@ -599,6 +646,48 @@
           delay: 2500,
         },
       });
+    </script>
+    <script>
+      const mediumUrl = "https://medium.com/feed/@a.kanojiya2003"; // Replace {your-medium-username} with your actual Medium username
+
+      fetch(
+        `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(
+          mediumUrl
+        )}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const mediumPreview = document.getElementById("blogs");
+          var content = "";
+          console.log(data)
+          data.items.forEach((element) => {
+            const title = element.title;
+            const link = element.link;
+            const image = element.thumbnail;
+            const subtitle = element.pubDate;
+            content =
+              content +
+              `
+                <a href="${link}" class="blog_link">
+                      <div class="blog_outer">
+                        <img src="${image}" alt="" class="blog_img" />
+                        <div class="blog_content">
+                          <div class="blog_title">
+                            ${title}
+                          </div>
+                          <div class="author">
+                            ${element.author}
+                          </div>
+                          <div class="subtitle">
+                            ${subtitle}
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                `;
+          });
+          mediumPreview.innerHTML = content;
+        });
     </script>
     <script src="script.js"></script>
   </body>
